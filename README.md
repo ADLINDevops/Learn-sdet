@@ -8,3 +8,6 @@
 - ✅ if/elif/else + Test logic
 - ✅ Dictionaries + Test reporting
 - ✅ LeetCode 217 solved
+
+- ✅solved Two sum Problem using Dictionary(hashmap)
+- ✅ Edge cases created with pytest, 100% coverage.
