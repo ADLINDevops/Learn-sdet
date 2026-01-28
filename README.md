@@ -13,3 +13,7 @@
 - ✅ Edge cases created with pytest, 100% coverage.
 ---> Learnt Kadane's Algorithm LC#121 with TIme complexity O(n) time O(1) space
 --->**Playwright**: First browser automation
+
+## Day 3 Complete ✅ 
+- ✅ Sliding window (Longest substring)-O(n)time complexity
+- ✅ Data driven testing- 8 testcase executed with 1 paramterized test

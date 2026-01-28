@@ -1,0 +1,7 @@
+{
+    "python.analysis.extraPaths": [
+        "./venv/My_project",
+        "./My_project/unit/test_",
+        "./My_project/dsa"
+    ]
+}
