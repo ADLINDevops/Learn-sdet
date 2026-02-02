@@ -17,3 +17,8 @@
 ## Day 3 Complete ✅ 
 - ✅ Sliding window (Longest substring)-O(n)time complexity
 - ✅ Data driven testing- 8 testcase executed with 1 paramterized test
+
+## Day 4 Complete ✅ 
+- ✅Page Object Model: Production UI framework  
+- ✅API Contracts: 4 data-driven tests  
+- ✅Integration: POM + API E2E flow
