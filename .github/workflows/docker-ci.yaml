@@ -3,7 +3,7 @@ on: [push]
 jobs:
   test:
     runs-on: ubuntu-latest
-    Steps:
+    steps:
     - uses: actions/checkout@v4
 
     - name: Build and Run Docker Tests
