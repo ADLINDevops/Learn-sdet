@@ -7,5 +7,5 @@ class LoginPage(BasePage):
         self.page.get_by_role("textbox",name="username").fill(email)
         self.page.get_by_role("textbox",name="password").fill(password)
         self.page.locator("button").click()
-        self.page.screenshot(path="login_Attempt")
+        self.page.screenshot(path="login_Attempt.png")
     #return Dashboard_page(self.page)

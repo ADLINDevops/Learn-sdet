@@ -1,4 +1,4 @@
-name: Dockerized SDET Tests
+name: Docker SDET Tests
 on: [push]
 jobs:
   test:

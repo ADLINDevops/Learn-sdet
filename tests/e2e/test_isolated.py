@@ -10,6 +10,6 @@ def test_mocked_api():
                 page=browser.new_page()
                 page.goto("https://the-internet.herokuapp.com/login")
                 login=LoginPage(page)
-                login.login("e2e@gmail.com","test")
-                assert page.locator("h1").is_visible()
+                login.login("tomsmith","SuperSecretPassword!")
+                assert page.locator("h2").is_visible()
                 browser.close()
