@@ -4,7 +4,7 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 #stage2- runner
-FROM  python:3.12-slim AS runner
+#FROM  python:3.12-slim AS runner
 #WORKDIR /app
 #COPY --from=BUILDER /usr/local /usr/local
 COPY . .
