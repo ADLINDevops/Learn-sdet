@@ -1,0 +1,19 @@
+name:Dockerized SDET Tests
+on: [push]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    Steps:
+    - uses: actions/checkout@v4
+
+    - name: Build and Run Docker Tests
+      run: |
+        docker build -t sdet-Tests
+        docker run -rm sdet-Tests
+    -name: Multi container
+      run: |
+      docker-compose up --build -d
+      sleep 5
+      curl http://localhost:8080/get
+      docker-compose down
+
