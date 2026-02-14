@@ -1,7 +1,9 @@
 version: '3.8'
 services:
   test-runner:
-    build: .
+    build:
+      context: ..                          # ← this is the key fix
+      dockerfile: docker/Dockerfile  
     volumes:
       - ./screenshots:/app/screenshots
     depends_on:
