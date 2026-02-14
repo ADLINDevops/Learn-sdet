@@ -14,7 +14,7 @@ jobs:
     - name: Multi container
       run: |
         docker compose -f docker/docker-compose.yml up --build -d
-        sleep 5
+        sleep 20
         curl http://localhost:8080/get
         docker compose -f docker/docker-compose.yml down
 
