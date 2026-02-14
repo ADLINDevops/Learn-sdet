@@ -7,6 +7,9 @@ services:
     depends_on:
       - mock-api
   mock-api:
+    build:
+      context: ..            # This tells it to look at the Root
+      dockerfile: docker/Dockerfile
     image: kennethreitz/httpbin
     ports:
       - "8080:80"
