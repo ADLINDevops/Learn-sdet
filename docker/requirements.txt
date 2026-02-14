@@ -1,0 +1,6 @@
+pytest
+playwright
+requests
+pytest-html
+chromium
+pytest-cov

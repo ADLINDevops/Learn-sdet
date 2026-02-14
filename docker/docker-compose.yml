@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  test-runner:
+    build: .
+    volumes:
+      - ./screenshots:/app/screenshots
+    depends_on:
+      - mock-api
+  mock-api:
+    image: kennethreitz/httpbin
+    ports:
+      - "8080:80"
