@@ -12,8 +12,8 @@ jobs:
         docker run --rm sdet-tests
     - name: Multi container
       run: |
-        docker compose up --build -d
+        docker compose -f docker/docker-compose.yml up --build -d
         sleep 5
         curl http://localhost:8080/get
-        docker compose down
+        docker compose -f docker/docker-compose.yml down
 
