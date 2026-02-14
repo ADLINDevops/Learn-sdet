@@ -1,4 +1,4 @@
-name:Dockerized SDET Tests
+name: Dockerized SDET Tests
 on: [push]
 jobs:
   test:
@@ -10,10 +10,10 @@ jobs:
       run: |
         docker build -t sdet-Tests
         docker run -rm sdet-Tests
-    -name: Multi container
+    - name: Multi container
       run: |
-      docker-compose up --build -d
-      sleep 5
-      curl http://localhost:8080/get
-      docker-compose down
+        docker-compose up --build -d
+        sleep 5
+        curl http://localhost:8080/get
+        docker-compose down
 
