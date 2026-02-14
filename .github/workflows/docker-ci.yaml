@@ -8,8 +8,8 @@ jobs:
 
     - name: Build and Run Docker Tests
       run: |
-        cd docker
-        docker build -t sdet-tests .
+        # Build from root (.) so Docker can see the 'tests' folder
+        docker build -t sdet-tests -f docker/Dockerfile .
         docker run --rm sdet-tests
     - name: Multi container
       run: |

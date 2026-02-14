@@ -9,7 +9,7 @@ WORKDIR /app
 COPY --from=BUILDER /usr/local /usr/local
 COPY . .
 RUN playwright install --with-deps chromium
-CMD [ "pytest","tests/","-v","--cov-report=xml" ]
+CMD [ "pytest","tests/","ls","-R","-v","--cov-report=xml" ]
 
 
 
