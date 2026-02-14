@@ -8,8 +8,8 @@ jobs:
 
     - name: Build and Run Docker Tests
       run: |
-        docker build -t sdet-Tests -f docker\Dockerfile .
-        docker run -rm sdet-Tests
+        docker build -t sdet-tests -f docker\Dockerfile .
+        docker run -rm sdet-tests
     - name: Multi container
       run: |
         docker-compose up --build -d
