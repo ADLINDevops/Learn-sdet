@@ -20,11 +20,10 @@ jobs:
       with:
        python-version: ${{ matrix.python-version }}
 
-    - name: Install and playwright
+    - name: Install and Playwright
       run: |
         pip install -r requirements.txt
-        playwright install --with-deps ${{ matrix.browser }}
-
+        playwright install-deps firefox
     - name: Run Tests
       run: pytest tests/ -v --cov=dsa
 

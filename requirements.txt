@@ -1,7 +1,7 @@
 pytest
 playwright
-pytest-playwright
-requests
-pytest-html
-chromium
-pytest-cov
+#pytest-playwright
+#requests
+#pytest-html
+#chromium
+#pytest-cov
