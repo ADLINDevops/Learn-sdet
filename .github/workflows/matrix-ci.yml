@@ -23,7 +23,8 @@ jobs:
     - name: Install and Playwright
       run: |
         pip install -r requirements.txt
-        playwright install-deps firefox
+        playwright install-deps --with-deps ${{ matrix.browser }}
+
     - name: Run Tests
       run: pytest tests/ -v --cov=dsa
 
