@@ -23,14 +23,14 @@ jobs:
     - name: Install and run
       run: |
         pip install -r requirements.txt
-        playwright install --with-deps ${{matrix.browser}}
+        playwright install --with-deps ${{ matrix.browser }}
 
     - name: Run Tests
-      run: pytest -m tests/ -v --tb="short"
+      run: pytest -m tests/ -v --cov=dsa
 
     - name: Docker
       run: |
-        docker build -t matrix-tests
+        docker build -t matrix-tests .
         docker run --rm matrix-tests
     
 
