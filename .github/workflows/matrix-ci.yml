@@ -1,0 +1,36 @@
+name: SDET matrix CI/CD
+on: [push, pull_request]
+
+jobs:
+  test-matrix:
+    run-on: ${{matrix.os}}
+    strategy:
+      matrix:
+        python-version: ['3.9','3.11']  
+        browser: ['chromium','firefox']
+        os: [windows-latest, ubuntu-latest]
+        exclude:
+          - os: windows-latest
+            browser: firefox
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Python Setup ${{matrix.python-version}}
+    - uses: actions/python-setup@v5
+      with:
+       python-version: ${{matrix.python-version}}
+
+    - name: Install and run
+      run: |
+        pip install -r requirements.txt
+        playwright install --with-deps ${{matrix.browser}}
+
+    - name: Run Tests
+      run: pytest -m tests/ -v --tb="short"
+
+    - name: Docker
+      run: |
+        docker build -t matrix-tests
+        docker run --rm matrix-tests
+    
+
