@@ -15,24 +15,17 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Setup Python ${{ matrix.python-version }}
+    - name: Setup Python 
       uses: actions/setup-python@v5
       with:
        python-version: ${{ matrix.python-version }}
 
     - name: Install and Playwright
-      run: |
-        pip install -r requirements.txt
-    - name: Install Playwright Browsers
-      run: playwright install ${{ matrix.browser }}
-
-    - name: Install System Dependencies
-      if: runner.os == 'Linux'
-      run: sudo apt-get install -y libgbm-dev libnss3 libasound2
+      run: pip install -r requirements.txt
 
     - name: Install Playwright Browsers
       run: playwright install ${{ matrix.browser }}
-        
+           
     - name: Run Tests
       run: pytest tests/ -v --cov=dsa
 
