@@ -1,8 +1,10 @@
-#pytest
 playwright==1.45.0
+pytest
+pytest-cov
 pytest-playwright==0.5.0
+chromium
 #pytest-playwright
 #requests
 #pytest-html
-chromium
+
 #pytest-cov
