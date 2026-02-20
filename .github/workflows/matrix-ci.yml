@@ -5,6 +5,7 @@ jobs:
   test-matrix:
     runs-on: ${{ matrix.os }}
     strategy:
+      fail-fast: false
       matrix:
         python-version: ['3.11']  
         browser: ['chromium','firefox']
