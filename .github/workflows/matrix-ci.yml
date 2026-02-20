@@ -20,7 +20,7 @@ jobs:
       with:
        python-version: ${{ matrix.python-version }}
 
-    - name: Install and run
+    - name: Install and playwright
       run: |
         pip install -r requirements.txt
         playwright install --with-deps ${{ matrix.browser }}
